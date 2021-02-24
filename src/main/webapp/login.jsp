@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <html>
 <head>
 	<link rel="shortcut icon" type="png" href="images/icon.png">
@@ -17,8 +19,10 @@
 		
 			
 			<!-- Login Form -->
-			<form id="login" class="input-group" action="login">
-				<div class="inp">
+			
+			<form id="login" class="input-group"    action="login">
+			<div class="inp"><h3> ${error}</h3></div>
+				<div>
 					<img src="images/user.png"><input  type="text" name="name" id="name" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
 				</div>
 				<div class="inp">
@@ -39,7 +43,7 @@
 			</div>
 			
 			<!-- Registration Form -->
-			<form id="register" class="input-group"  action="register">
+			<form id="register" class="input-group"   action="register">
 				<input type="text" class="input-field" name="name" placeholder="Full Name" required="required">
 				<input type="email" class="input-field" name="email" placeholder="Email Address" required="required">
 				<input type="password" class="input-field" name="pass" placeholder="Create Password" required="required">
