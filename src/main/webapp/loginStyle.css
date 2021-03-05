@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("images/back.png");
+	background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url("images/login/back.png");
 	background-size: cover;
 	background-attachment: fixed;
 	display: flex;
@@ -87,8 +87,9 @@ body {
 	font-size: 13px;
 	color: #010101;
 }
-.inp {
+.inp h3{
 	border-bottom: 1px solid rgba(0,0,0,0.4);
+	margin-top: -2%
 }
 .inp img{
 	width: 20px;
@@ -117,7 +118,7 @@ body {
 .submit-btn
 {
 	width: 40%;
-	margin-top: 500pt;
+	margin-top: 50%;
 	padding: 10px 20px;
 	cursor: pointer;
 	align-items: center;
