@@ -29,10 +29,16 @@ body {
 .logo img {
 	width: 100px;
 }
+
+get-start input[type=text] {
+    background-color: #8842d5;
+    color: white;  
+}
+
 .form-box
 {
 	width: 380px;
-	height: 450px;
+	height: 510px;
 	position: relative;
 	margin: 6% auto;
 	background: transparent;
@@ -80,6 +86,7 @@ body {
 
 .input-group
 {
+	height: 100%;
 	top: 115px;
 	position: absolute;
 	width: 280px;
