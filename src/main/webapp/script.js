@@ -2,8 +2,7 @@
 var x = document.getElementById("login");
 var y = document.getElementById("register");
 var z = document.getElementById("btn");
-//var a = document.getElementById("log");
-//var b = document.getElementById("reg");
+
 var w = document.getElementById("other");
 
 function register() {
@@ -32,16 +31,22 @@ element.classList.toggle("dark-mode");
 
 }
 
-// Close the dropdown if the user clicks outside of it
-//window.onclick = function(event) {
-  //if (!event.target.matches('.dropbtn')) {
-    //var dropdowns = document.getElementsByClassName("dropdown-content");
-    //var i;
-    //for (i = 0; i < dropdowns.length; i++) {
-      //var openDropdown = dropdowns[i];
-      //if (openDropdown.classList.contains('show')) {
-       // openDropdown.classList.remove('show');
-      //}
-    //}
-  //}
-//}
+const boxes = document.querySelectorAll('.box')
+
+window.addEventListener('scroll', checkBoxes)
+
+checkBoxes()
+
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if(boxTop < triggerBottom){
+            box.classList.add('show')
+        }else {
+            box.classList.remove('show')
+        }
+    })
+}

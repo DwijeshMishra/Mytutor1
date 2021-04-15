@@ -1,10 +1,14 @@
 package com.example.demo;
 
+
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,20 +26,27 @@ import com.example.demo.model.youtube_Links_model;
 
 public class controller 
 {
+	private int otp_global; //otp stored in class level variable
+
+	private String recovery_mail;
+
+	
+	
 	@Autowired
 	private JavaMailSender sender;
 	
 	String name; //Global variable that contain Username
 	
 	@Autowired
-	Log_Reg_dao ld;
+	Log_Reg_dao ld;  //dao object to connect database
 	
 	@Autowired
-	youtube_Link_Dao yrepo;
+	youtube_Link_Dao yrepo; // youtube link dao object to fetch link from database
 
 	// staring page /
 	@RequestMapping("/")
 	public String home() {
+		
 		return "start.html";
 	}
 	
@@ -74,25 +85,36 @@ public class controller
 		{
 			if (Lr_Obj1!=null) {
 			//Fetch name and perform action with the help of name
-			if (Lr_Obj1.getEmail()!=null && Lr_Obj1.getName() != null && Lr_Obj1.getPass() != null) {
-				session.setAttribute("name",name);
-				System.out.println(session.getAttribute(name));
+			if (Lr_Obj1.getEmail()!=null && Lr_Obj1.getName() != null ) {
+				if( Lr_Obj1.getPass().endsWith(pass)) {
+				session.setAttribute("name",Lr_Obj1.getName());
+				
 				m.addAttribute("pass", pass);
 				m.addAttribute("name", Lr_Obj1.getName());
 				String img_link ="https://www.youtube.com/embed/cpP-fCo8Dn4?autoplay=1&mute=1";
 				session.setAttribute("ylink",img_link);
 				return "homePage.jsp";
+				}
+				else {
+					m.addAttribute("msg", "password is incorrect");
+				}
 			}
 			}
 	    else 
 	    if (Lr_Obj2!=null) {	
 			{
 		    //Fetch email and perform action with the help of email
-			if (Lr_Obj2.getEmail()!=null && Lr_Obj2.getName() != null && Lr_Obj2.getPass() != null) {
-				session.setAttribute("name",name);
+			if (Lr_Obj2.getEmail()!=null && Lr_Obj2.getName() != null ) {
+				if( Lr_Obj2.getPass().endsWith(pass)) {
+				session.setAttribute("name",Lr_Obj2.getName());
 				m.addAttribute("name", Lr_Obj2.getName());
 				m.addAttribute("pass", Lr_Obj2.getPass());
 				return "homePage.jsp";
+				}
+				else 
+				{
+					m.addAttribute("msg", "password is incorrect");
+				}
 				}
 			}
 		   }
@@ -102,28 +124,39 @@ public class controller
     
 	//RegisterServlet
 	@PostMapping("register")
-	public String register(@ModelAttribute Log_RegModel lm,@RequestParam("email") String email,Model m) throws Exception 	
+	public String register(@ModelAttribute Log_RegModel lm,
+	Model m) throws Exception 	
 	{
 		
 		Log_RegModel lm1; //TO CHECK EMAIL ALREADY THERE
+	
 		
-		lm1=ld.findByEmail(email);
-		if(lm1==null) 
+	
+		lm1 = ld.findByEmail(lm.getEmail()); //find in db
+		
+		
+		
+		if(lm1==null) //null return so that email is not there
 		{
-			ld.save(lm);  // Null return so that email is not there  
+			if(ld.findByName(lm.getName())==null) // if email is not there we can check name is there or not if name is not there return null
+			{
+			ld.save(lm);  // save the details in database
 			m.addAttribute("msg","You are SuccessFully registerd"); // msg goes to login
 			return "login.jsp";
-			
-		}
-		else {
-		if(lm.getEmail().equals(email)) 
-		{
-			m.addAttribute("msg","This email is already registerd"); //If Email is already there   
+			}
+			else
+			{
+			m.addAttribute("msg","This email or username is already registerd"); //If Email is already there   
 			return "login.jsp";
+			}
 		}
-		}
-	
-		return "login.jsp";
+		
+		else
+			{
+			m.addAttribute("msg","This email or username is already registerd"); //If Email is already there   
+			return "login.jsp";
+			}
+			
 	    
 	}
 	
@@ -233,12 +266,86 @@ public class controller
 		
 	}
 
+	//send pass
+    @PostMapping("send_otp")
+    public String sendOtp(@RequestParam("email") String email,Model m) 
+    {
+    	recovery_mail = email;
+    	
+    	Log_RegModel lr;
+    	lr = ld.findByEmail(email);
+    	if(lr!=null) {
+    	String from = "mytutor.onlineportal@gmail.com";
+		String to = email;
+	
+		//Generate otp
+	
+		int otp = (int) (Math.random()*9000)+1000;
+		
+		otp_global =otp;
+		SimpleMailMessage message = new SimpleMailMessage();
+		 
+		message.setFrom(from);
+		message.setTo(to);
+	
+		String mail_content = "Name:"+ lr.getName() +" "  + "\n" +  "YOUR OTP IS" +"\n"+ otp; 
+		message.setSubject("Thank you for contacting us");	
+		message.setText(mail_content);
+		
+		sender.send(message);
+		m.addAttribute("msg","Otp was successfully sent in your mail");
+		return "otp.jsp";
+    	}
+    	
+    	else
+    	{
+    	m.addAttribute("msg","This email is not registerd ");
+    	return "login.jsp";
+    	}
+    
+    }
+
+    //check otp
+    @PostMapping("check_otp")
+    public String check_otp(@RequestParam("otp") String otp,Model m)
+
+    {
+    	
+    	int otp_cov = Integer.parseInt(otp);
+    	if(otp_cov==otp_global) 
+    	{
+    		
+    		m.addAttribute("msg","your otp is correct");
+    		return "new_password.jsp";
+    	}
+    	else 
+    	{
+    		m.addAttribute("msg","your otp is incorrect");
+    		return "otp.jsp";
+    	}
+  
+	
+    }
 
 
-
-
-
-
+    @PostMapping("change_pass")
+    public String changePassword(@RequestParam("pass") String newpass,Model m) 
+   {
+	   Log_RegModel lr;
+	   try {
+	   lr = ld.findByEmail(recovery_mail);
+	 
+	   //lr.setPass(bcrypt.encode(newpass));
+	   lr.setPass(newpass);
+	  
+	   ld.save(lr);
+	   }
+	   catch(Exception e) {
+		   System.out.println("User is not found");
+	   }
+	   m.addAttribute("msg","Password changed successfully");
+	   return "login.jsp";
+   }
 
 
 

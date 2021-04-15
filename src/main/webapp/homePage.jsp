@@ -121,7 +121,7 @@ if(session.getAttribute("name")==null){
 			</div>
 	</header>
 
-<!-- TEAM -->
+<<!-- TEAM -->
 	<div class="diffSection" id="team_section" >
 		<center><p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px;color: orangered;">Team</p></center>
 		<div class="totalcard">
@@ -140,7 +140,7 @@ if(session.getAttribute("name")==null){
 			</div>
 			<div class="card">
 				<div class="card-inner">
-				<center><img src="https://media-exp1.licdn.com/dms/image/C4E03AQEMPdabt0ez1w/profile-displayphoto-shrink_400_400/0/1615200623694?e=1621468800&v=beta&t=wMNdwdIlEvZJOs1-Tkld2XHZW6wD0ondZPsYDNjIHg8"></center>
+				<center><img src="images/home/dj.png"></center>
 				<center><div class="card-title">Dwijesh Mishra</div>
 				<div id="detail">
 					<p>Studying Computer Science in Shri Vaishnav Vidhyapeeth Vishwavidhyalaya . Third year under graduate student of B Tech </p>
@@ -176,7 +176,6 @@ if(session.getAttribute("name")==null){
 				</center>
 			</div>
 			</div>
-		
 
 <!-- SERVICES -->
 <div class="service-swipe">
@@ -265,9 +264,8 @@ Our content and resources are freely available and we prefer to keep it that way
 
 <!-- Sliding Information -->
 <a href="quiz.html" class="fab"> ? </a>
-<a href="project.html"  class="fab1"><img src="images/home/projects.png"></a>
+<a href="project.jsp"  class="fab1"><img src="images/home/projects.png"></a>
 <center><p style="font-size: 50px; padding: 100px; padding-bottom: 10px;margin-top:4%; color: orangered;">Found Us</p></center>
-
 
 <!-- FOOTER -->
 	<footer>
@@ -276,11 +274,11 @@ Our content and resources are freely available and we prefer to keep it that way
 		<div class="social-media">
 				<a href="https://www.instagram.com/mytutor.onlineportal/"><img src="images/home\insta.png"></a>
 					<!--a href="#"><img src="images/home\ytube.png"></a-->
-					<a href="hhttps://www.linkedin.com/in/my-tutor-1600b8209"><img src="images/home/linkedin.png"></a>
+					<a href="https://www.linkedin.com/in/my-tutor-1600b8209/"><img src="images/home/linkedin.png"></a>
 				</div></br></br>
 				<p class="rights-text">Copyright © 2021 </br></br>Created By</br> Anant Jain , Dwijesh Mishra</br>Pranjal Gupta and Priyansh Neema. 
 				</br></br><img src="images/home/location.png">Shri Vaishnav Vidhyapeeth Vishwavidhyalaya</br>Indore, Madhya Pradesh 453111
-			</br></br><img src="images/home/phone.png"> +91-1234-567-890</br></br><img src="images/home/mail.png">&nbsp; mytutor231@gmail.com</p>
+			</br></br><img src="images/home/phone.png"> +91-1234-567-890</br></br><img src="images/home/mail.png">&nbsp; neemapriyanshrd786@gmail.com</p>
 			</div>
 		
 		</div>
