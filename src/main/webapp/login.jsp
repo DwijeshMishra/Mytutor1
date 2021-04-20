@@ -1,8 +1,3 @@
-<!--Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html lang="zxx">
 
@@ -38,11 +33,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <body>
 	<div class="main-bg">
-		<!-- title -->
 		<h1></h1>
-		<!-- //title -->
 		<div class="sub-main-w3">
-			<div class="image-style">
+		<div class="image-style">
 
 			</div>
 			<!-- vertical tabs -->
@@ -53,7 +46,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<article>
 						<form id="login" class="input-group" method="post" action="login">
 							<h3 class="legend">Login Here</h3>
-													
 							<div class="input">
 								<span class="fa fa-envelope-o" aria-hidden="true"></span>
 								<input name="name" type="text" placeholder="Email" name="email" required />
@@ -63,7 +55,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<input name="pass" type="password" placeholder="Password" name="password" required />
 							</div>
 							<button type="submit" onclick="" class="btn submit">Login</button>
-							<a href="#" class="bottom-text-w3ls">${msg} .</a>  
+							<a href="#" class="bottom-text-w3ls">${msg}</a>  
 						</form>
 					</article>
 				</div>

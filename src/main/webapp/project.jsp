@@ -20,7 +20,7 @@
 				You are signed in as
 				</div>
 				<div class="profile">
-						<a class="get-start" href="profile?name=${name}"><%session.getAttribute("name"); %>></a></div>
+						<a class="get-start" href="profile?name=${name}"><%=session.getAttribute("name")%></a></div>
 				<div class="logout">
 					<a class="get-started" href="login.html">Sign Out</a></div>
 					</nav>

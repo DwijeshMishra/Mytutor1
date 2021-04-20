@@ -1,7 +1,4 @@
 package com.example.demo;
-
-
-
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -347,13 +344,10 @@ public class controller
 	   return "login.jsp";
    }
 
-
-
-
-
-
-
-
-
+    @RequestMapping("search")
+    public String search(@RequestParam("search") String search) {
+    	
+    	return search;
+    }
 
 }

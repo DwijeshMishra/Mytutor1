@@ -343,15 +343,15 @@ label.icon-left-w3pvt span {
     margin-bottom: 7.8px;
 }
 
-/* //vertical tabs */
-
-/* form style */
 .sub-main-w3 form {
     background: aliceblue;
     padding: 2em;
     height: 306.5px;
 }
-
+form#register {
+    height: 483px;
+    background: aliceblue;
+}
 .sub-otp{
 	margin: 1.5vw 16vw;
     margin: 5vw auto;

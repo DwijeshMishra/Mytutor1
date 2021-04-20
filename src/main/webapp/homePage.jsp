@@ -42,8 +42,10 @@ if(session.getAttribute("name")==null){
 			
 		
 			<div class="srch">
-				<img src="images/home/wiki.png" alt="wiki">
-				<input id="search" type="text" placeholder="Search here..."><img src="images/home/download.png" alt="search" onclick=slide()></div>
+				<a href="http://www.google.com"><img src="images/home/download.png" alt="search" ></a>
+				
+				<input id="search"  type="text"  placeholder="Search here..."></div>
+			
 				<div class="profile">
 					<a class="get-start" href="profile?name=${name}"><%=session.getAttribute("name")%></a></div>
 				
@@ -263,7 +265,7 @@ Our content and resources are freely available and we prefer to keep it that way
 		</div>
 
 <!-- Sliding Information -->
-<a href="quiz.html" class="fab"> ? </a>
+<a href="quiz.jsp" class="fab"> ? </a>
 <a href="project.jsp"  class="fab1"><img src="images/home/projects.png"></a>
 <center><p style="font-size: 50px; padding: 100px; padding-bottom: 10px;margin-top:4%; color: orangered;">Found Us</p></center>
 
@@ -278,7 +280,7 @@ Our content and resources are freely available and we prefer to keep it that way
 				</div></br></br>
 				<p class="rights-text">Copyright © 2021 </br></br>Created By</br> Anant Jain , Dwijesh Mishra</br>Pranjal Gupta and Priyansh Neema. 
 				</br></br><img src="images/home/location.png">Shri Vaishnav Vidhyapeeth Vishwavidhyalaya</br>Indore, Madhya Pradesh 453111
-			</br></br><img src="images/home/phone.png"> +91-1234-567-890</br></br><img src="images/home/mail.png">&nbsp; neemapriyanshrd786@gmail.com</p>
+			</br></br><img src="images/home/phone.png"> +91-1234-567-890</br></br><img src="images/home/mail.png">&nbsp; mytutor231@gmail.com</p>
 			</div>
 		
 		</div>
