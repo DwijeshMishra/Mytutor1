@@ -83,7 +83,6 @@ if(session.getAttribute("name")==null){
 			<form action="youtube_link"  method="post"  class="form">
 				<label>Development</label> <select name="subject" class="button" onchange='this.form.submit()'>
 					<option value="Data Structures and Algorithms" class="box">Choose</option>
-					<option value="HTML" class="box">HTML & CSS</option>
 					<option value="Flutter" class="box">Flutter</option>
 					<option value="Bootstrap" class="box">Bootstrap</option>
 					<option value="javascript" class="box">JavaScript</option>
