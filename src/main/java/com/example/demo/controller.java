@@ -107,6 +107,7 @@ public class controller
 				m.addAttribute("name", Lr_Obj2.getName());
 				m.addAttribute("pass", Lr_Obj2.getPass());
 				String img_link ="https://www.youtube.com/embed/cpP-fCo8Dn4?autoplay=1&mute=1";
+				session.setAttribute("ylink",img_link);
 				return "homePage.jsp";
 				}
 				else 
