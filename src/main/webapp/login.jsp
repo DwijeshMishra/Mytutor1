@@ -98,7 +98,7 @@
 					<input type="radio" name="sections" id="option3">
 					<label for="option3" class="icon-left-w3pvt"><span class="fa fa-lock" aria-hidden="true"></span>Forgot Password?</label>
 					<article>
-						<form action="sendotp" method="get">
+						<form action="otp" method="post">
 							<h3 class="legend last">Reset Password</h3>
 							<p class="para-style">Enter your email address below and we'll send you an email with instructions.</p>
 							<p class="para-style-2"><strong>Need Help?</strong> Learn more about how to <a href="#">retrieve an existing

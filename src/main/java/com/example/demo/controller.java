@@ -264,7 +264,7 @@ public class controller
 	}
 
 	//send pass
-    @PostMapping("sendotp")
+    @RequestMapping("otp")
     public String sendOtp(@RequestParam("email") String email,Model m) 
     {
     	recovery_mail = email;
