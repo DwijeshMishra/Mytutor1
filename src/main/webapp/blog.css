@@ -52,7 +52,7 @@ nav {
 .para{
 	margin-top: -1%;
     position: absolute;
-    margin-right: -33%;
+    margin-right: -34%;
 	color: orangered;
 	font-size: large;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -60,7 +60,7 @@ nav {
 }
 
 .profile{
-	margin-right: -56%;
+	margin-right: -55%;
     margin-top: -1%;
     position: absolute;
 }
@@ -78,7 +78,7 @@ nav {
 }
 
 .logout{
-	margin-right: -86%;
+	margin-right: -82%;
     margin-top: -1%;
     position: absolute;
 }
@@ -244,4 +244,92 @@ margin-top: 45px;
 	margin-top:-500px;
 	margin-left: 22%;
 	margin-bottom:40px;
+}
+/*||||||||||||||||||||||||  RESPONSIVE  ||||||||||||||||||||||||||||||||||||||*/
+@media only screen and (max-width:370px) {
+	body {
+		background: white;
+
+	}
+	.logo img {
+		width: 105px;
+	}
+	.logo {
+		margin-left: -73%;
+		margin-top: -3%;
+	}
+	.home {
+		margin-right: 35%;
+	}
+	nav{
+		height: 13%;
+	}
+	.home img {
+		width: 46px;
+		}
+	.get-start{
+		padding: 1px 8px;
+		width: 70%;
+		font-size: xx-small;
+	}
+	
+	.get-started{
+		padding: 1px 1px;
+		width: 62%;
+		font-size: xx-small;
+	}
+	.profile{
+		margin-right: -34%;
+	}
+	.logout{
+		margin-right: -68%;
+	}
+	.para{
+		margin-right: -6%;
+		font-size: xx-small;
+	}
+	header{
+		width: 110%;
+	}
+	.mar {
+		margin-top: 35px;
+	}
+	.heady{
+		font-size: small;
+	}
+	.inbt {
+		width: 113%;
+		padding: 24px;
+		font-size: 13px;
+		margin-left: -2%;
+	}
+	.ccardbox {
+		margin-left: 8%;
+		margin-top: -11%;
+	}
+	.title2 .shortdesc2 {
+		font-size: 11px;
+		margin-left: 9.5%;
+	
+	}
+	.title2 span {
+		font-size: 13px;
+		margin-left: 26%;
+	}
+	.title2 {
+	margin-left: -5px;
+	}
+	.ccardbox2 {
+		margin-left: 8%;
+	}
+	.dcard {
+		margin: 16px;
+		width: 270px;
+		height: 190px;
+	}
+	.dcard2 {
+		margin: 16px;
+		width: 270px;
+		height: 190px;
+	}
 }

@@ -1,11 +1,10 @@
-
 * {
 	box-sizing: border-box;
 	margin: 0%;
 	padding: 0px;
 }
 html {
-	scroll-behavior: smooth;
+	scroll-behavior: smooth; 
 }
 body {
 	background-color: white;
@@ -39,9 +38,8 @@ nav {
     margin-top: -1%;
 
 }
-.logo img {
-    width: 166px;
-    margin-bottom: -10px;
+.logo img{
+	width: 166px;
 }
 
 .list{
@@ -238,7 +236,7 @@ margin-top: 45px;
     width: 760px;
     height: 69%;
     margin-left: 43%;
-    margin-top: -32%;
+    margin-top: -32.5%;
 }
 * {
     box-sizing: border-box;
@@ -249,11 +247,8 @@ margin-top: 45px;
 .svg-image{
 	width: 740px;
 	position: absolute;
-	height: 468px;
-
-	margin-top: 1.3%;
-	
-
+	height: 96%;
+    margin-top: 1.3%;
 	}
 
 
@@ -300,6 +295,7 @@ margin-top: 45px;
 		height: 326px;
 	}
 
+
 .totalcard .card{
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.4),
 					0 0 10px rgba(0,0,0,0.3);
@@ -321,22 +317,17 @@ margin-top: 45px;
 	border-radius: 0;
 	box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
-
-#detail p {
-    font-size: 21px;
-    line-height: 22px;
-    font-variant: small-caps;
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 25px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    color: white;
+#detail p{
+	font-size: 20px;
+	line-height: 25px;
+	font-variant: small-caps;
+	text-align: center;
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 25px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	color: white;
 }
-
-
-
-
 #detail button {
 	outline: none;
 	border-radius: 30px;
@@ -592,8 +583,12 @@ width: 100%;
 	position: relative;
     width: 38%;
     height: 83%;
-    margin-left: 4%;
+    margin-left: 6%;
 
+}
+.about-text p{
+	font-size: 145%;
+	text-align: justify;
 }
 .rev-container .about-image{
 	display: flex;
@@ -692,3 +687,355 @@ footer .social-media a{
 	transform: scale(1.05);
 	cursor:pointer;
  }
+
+/* ///////////////////////////////////////////////For MOBILE ////////////////////////////////////////////////////// */
+@media only screen and (max-width:380px) {
+	.logo {
+	    margin-left: -82%;
+		margin-top: -3%;
+	}
+	.logo img {
+		width: 114px;
+	}
+	.srch img {
+		width: 16px;
+		margin-right: -2%;
+		margin-left: -3%;
+	}
+	.list {
+		width: 62%;
+		margin-left: -2%;
+		position: absolute;
+		margin-top: -5%;
+	}
+	.list ul li a {
+		padding: 3px 3px;
+		margin-left: -3%;
+		font-size: small;	
+	}
+	.srch{
+	width: 41%;
+    margin-top: 4%;
+    margin-right: 34%;
+	}
+	
+	
+	nav {
+		padding-top: 5%;
+		height: 9%;
+	}
+	.profile {
+		margin-right: -39%;
+		margin-top: -5%;
+	}
+	.mar {
+		margin-top: 16%;
+		width: 217%;
+	}
+	.get-start {
+		margin-left: 38px;
+    padding: 3px 19px;
+    width: 80%;
+    font-size: x-small;
+	}
+	.get-started {
+		margin-left: 55px;
+		padding: 3px 7px;
+		width: 59%;
+		font-size: x-small;
+		}
+	
+		.logout {
+    margin-right: -65%;
+    margin-top: -5%;
+}
+	.heady{
+		font-size: medium;
+		padding: 1px;
+		margin-top: 2%;
+	}
+	.head-container {
+    width: 82%;
+    height: 39%;
+    margin-left: 60%;
+    position: absolute;
+}
+	.inner{
+		height: 95%;
+	}
+	.youtube {
+    margin-top: 76%;
+    width: 186%;
+    height: 54%;
+    position: absolute;
+    margin-left: 13%;
+}
+	.svg-image {
+		width: 96%;
+		position: absolute;
+		height: 95%;
+		margin-top: 1.3%;
+	}
+	.feedbox {
+		margin-top: 70px;
+		width: 139%;
+	}
+	#team_section p{
+		margin-left: 62%;
+		margin-top: 71px;
+	}
+
+	.rev-container {
+		background: linear-gradient(
+	45deg
+	,#ffbc00,#ff0058);
+		height: 518px;
+		margin-top: 3%;
+		width: 109%;
+	}
+	
+
+	#contactus_section p{
+	    margin-left: 3%;
+    margin-top: -1%;
+	}
+	.form label {
+		font-size: x-small;
+		margin-left: 4%;
+		width: 298%;
+		margin-top: -1%;
+	}
+	.form {
+		display: flex;
+		width: 300%;
+		margin-left: 0%;
+		margin-top: 5%;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		color: white;
+		font-size: x-small;
+		padding-top: 0%;
+	}
+	.button {
+		color: white;
+		width: 139%;
+		display: list-item;
+		font-size: x-small;
+		font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+		margin-left: -185%;
+		margin-top: 7%;
+		margin-right: 9%;
+		padding: 0px;
+		background: transparent;
+		border-radius: 30px;
+		border: solid;
+	}
+
+.totalcard {
+    width: 146%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-left: 37px;
+}
+.totalcard .card {
+    margin: 30px;
+    width: 247px;
+    border-radius: 60px;
+    background: linear-gradient(
+45deg
+,#ffbc00,#ff0058);
+    height: 307px;
+	margin-top: -4%;
+}
+/*.diffSection p{
+	font-size: 15px;
+}*/
+.card-inner {
+    margin: 18px;
+    width: 210px;
+    border-radius: 60px;
+    background: rgba(0,0,0,0.6);
+    height: 271px;
+}
+.totalcard .card img {
+    width: 69px;
+    height: 62px;
+    margin-top: 11px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition-duration: .8s;
+}
+.card-title {
+    font-size: 12px;
+    color: white;
+    padding: 20px;
+    font-weight: 700;
+}
+.about .rev-container .about-text {
+	width: 201%;
+    margin-left: -114%;
+}
+
+.about .rev-container .about-image {
+	margin-left: 11%;
+    margin-top: -24%;
+}
+.about .rev-container .about-image img {
+	width: 81%;
+    height: 203px;
+}
+
+#detail p {
+    font-size: 13px;
+    line-height: 21px;
+    font-variant: small-caps;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: white;}
+
+#detail button {
+    outline: none;
+    border-radius: 30px;
+    border-style: none;
+    border: 1px solid black;
+    padding: 2px 13px;
+    cursor: pointer;
+    transition-duration: .4s;
+    margin-left: -33%;
+    background: #ffbc00;
+    margin-top: -19%;
+}
+.service-swipe .s-card {
+    padding: 79px;
+    width: 265px;
+    height: 204px;
+    margin-top: -2%;
+}
+.about-text {
+    position: relative;
+    width: 92%;
+    height: 83%;
+    margin-left: 1%;
+}
+.about-text p{
+	font-size: 97%;
+    margin-left: 22%;
+    justify-items: end;
+}
+.diffSection #team_section p{
+	margin-left: 10%;
+}
+.rev-container .about-image {
+	display: flex;
+    width: 94%;
+    margin-left: 11%;
+    margin-top: -31%;
+}
+#about_section p{
+	margin-left: -9%;
+}
+
+footer .social-media img {
+    width: 27px;
+    margin-left: 10%;
+}
+
+.service-swipe {
+    height: 627px;
+    margin-right: -120px;
+    margin-left: -49px;
+}
+.service-swipe .s-card img {
+    width: 209px;
+    padding: 8px;
+    border-radius: 64px;
+    border: 4px solid white;
+    height: 168px;
+    margin-top: -42%;
+    margin-left: -57px;
+}
+
+.cc {
+    height: 400px;
+    width: 430px;
+    height: 473px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 1px 1px 20px rgb(0 0 0 / 40%);
+    background: #fff;
+    margin-left: 5%;
+}
+.cc form {
+    margin: 5%;
+    margin-top: 40px;
+    width: 89%;
+    height: 90%;
+}
+.cc form input {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px lightgrey;
+    border: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+    color: #2E3D49;
+    font-weight: 600;
+}
+
+
+.fab {
+    right: 31px;}
+	.fab1{
+		right: 31px;
+	}
+
+ .diffSection {
+    width: 117%;
+    /* position: relative;*/ 
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+  footer {
+    color: #E5E8EF;
+    background: linear-gradient(#ff0058,#ffbc00);
+    padding: 50px 0;
+    margin-bottom: -14%;
+    margin-top: 3%;
+    margin-left: 0%;
+    margin-right: -55px;
+}
+#services_section p{
+	
+    margin-left: 6%;
+}
+
+
+  .csec {    width: 129%;
+    margin-left: -9%;
+    margin-top: 4%;
+}
+ .title2 {
+   margin-left: 255px;
+}
+.back-contact{
+	margin-top: 29px;
+}
+
+footer .rights-text {
+    margin-top: 5%;
+    font-weight: 600;
+    font-size: larger;
+    margin-right: -420px;
+}
+ 
+.found {
+	margin-left:84px  !important;
+}
+}

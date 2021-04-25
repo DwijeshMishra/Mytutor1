@@ -40,7 +40,7 @@ if(session.getAttribute("name")==null){
 				<a class="get-started" href="logout.jsp">Sign Out</a></div>
 				</nav>
 	<div class="mar">
-		<marquee style="background: linear-gradient(45deg,#ffbc00,#ff0058);opacity: 1; margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="15"><div class="heady">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.Your attitude, not your aptitude, will determine your altitude.If you think education is expensive, try ignorance.The only person who is educated is the one who has learned how to learn â¦and change.</div></marquee>
+		<marquee style="background: linear-gradient(45deg,#ffbc00,#ff0058);opacity: 1; margin-top: 50px;" direction="left" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="15"><div class="heady">Education is the passport to the future, for tomorrow belongs to those who prepare for it today.Your attitude, not your aptitude, will determine your altitude.If you think education is expensive, try ignorance.The only person who is educated is the one who has learned how to learn and change</div></marquee>
 	    </div>
 <div class ="fontsi"><font size="7" color="maroon">DOWNLOAD YOUR PREFERRED BOOK</font></div>
 <div class="outer">
