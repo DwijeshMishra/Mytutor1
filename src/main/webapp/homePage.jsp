@@ -268,7 +268,7 @@ Our content and resources are freely available and we prefer to keep it that way
 <!-- Sliding Information -->
 <a href="quiz.jsp" class="fab"> ? </a>
 <a href="project.jsp"  class="fab1"><img src="images/home/projects.png"></a>
-<center><p style="font-size: 50px; padding: 100px; padding-bottom: 10px;margin-top:4%; color: orangered;">Found Us</p></center>
+<center><p class="found" style="font-size: 50px; padding: 100px; padding-bottom: 10px;margin-top:4%; color: orangered;">Find Us</p></center>
 
 <!-- FOOTER -->
 	<footer>
