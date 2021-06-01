@@ -46,13 +46,7 @@ public class controller
 		
 		return "start.html";
 	}
-	// test page /
-		@RequestMapping("/test")
-		public String test() {
-			
-			return "test";
-		}
-	
+
 	// loginServlet
 	@RequestMapping("login")
 	public String loginServlet(@RequestParam("name") String name,@RequestParam("pass") String pass, Model m,HttpSession session) 
