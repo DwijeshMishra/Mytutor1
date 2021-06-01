@@ -46,6 +46,12 @@ public class controller
 		
 		return "start.html";
 	}
+	// test page /
+		@RequestMapping("/test")
+		public String test() {
+			
+			return "test";
+		}
 	
 	// loginServlet
 	@RequestMapping("login")
@@ -247,7 +253,7 @@ public class controller
 	Model m) 
 	{
 		String from = mail;
-		String to = "mytutor231@gmail.com";
+		String to = "mytutor.leran@gmail.com";
 		 
 		SimpleMailMessage message = new SimpleMailMessage();
 		 
