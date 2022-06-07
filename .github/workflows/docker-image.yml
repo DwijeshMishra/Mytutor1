@@ -37,8 +37,8 @@ jobs:
      runs-on: ubuntu-18.04
      needs: build
      steps:
-     - uses: actions/upload-artifact@v1
-       with:
-          name: jar-artifact
-          path: target/
-     - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - uses: actions/upload-artifact@v1
+        with:
+           name: jar-artifact
+           path: target/
+      - run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
