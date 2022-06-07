@@ -21,15 +21,12 @@ jobs:
      - run: mvn --batch-mode --update-snapshots verify
      - run: mvn compile war:war
      - run: mvn clean package --file pom.xml
-
-     - uses: actions/checkout@v1
-
      - run: mkdir -p target/
 
-     - name: Temporarily save jar artifact
+     - name: Temporarily save war artifact
        uses: actions/upload-artifact@v2
        with:
-        name: jar-artifact
+        name: war-artifact
         path: ${{ github.workspace }}/target/*.war
         retention-days: 1
   deploy:
