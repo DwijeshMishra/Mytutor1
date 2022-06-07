@@ -18,15 +18,10 @@ jobs:
         uses: actions/upload-artifact@v2      
         with:        
           name: DevOpsPipeline.war        
-          path: target/DevOpsPipeline.war
+          path: target/final.war
     
-      - name: Upload artifact. 
-        uses: actions/upload-artifact@v2
-        with:
-          name: DevOpsPipeline.war
-          path: target/*.war
-      - run: ls -l
-      - run: ls target
-      - run: cd target | ls 
-      - run: cd ..
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        
+      - run: pwd 
       - run: docker build -t dwijesh515/mytutor .
