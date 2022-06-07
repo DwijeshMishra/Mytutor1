@@ -6,42 +6,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
- 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 8
-      uses: actions/setup-java@v2
-      with:
-        java-version: '8'
-        distribution: 'adopt'
-        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
-        settings-path: ${{ github.workspace }} # location for the settings.xml file
-
-
-    - name: Compile
-      run: mvn -B compile --file pom.xml
-
-    - name: Build a package
-      run: mvn -B package --file pom.xml
-
-    - name: Temporarily save jar artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: war-artifact
-        path: ${{ github.workspace }}/target/*.war
-        retention-days: 1
-
-  deploy:
-    runs-on: ubuntu-18.04
-    needs: build
-
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/download-artifact@v1
-      with:
-          name: war-artifact
-          path: target/
-    - name: Docker build
-      run: |
-        docker build . -t dwijesh515/tutor:latest
-
+    steps:    
+      - uses: actions/checkout@v2    
+      - name: Set up JDK 11      
+        uses: actions/setup-java@v1      
+        with:        
+          java-version: '11'
+      - name: Build package      
+        run: mvn --batch-mode package --file pom.xml  
+      - name: Upload build artifacts       
+        uses: actions/upload-artifact@v2      
+        with:        
+          name: DevOpsPipeline.war        
+          path: target/DevOpsPipeline.war
+    
+      - name: Upload artifact. 
+      - uses: actions/upload-artifact@v2
+        with:
+          name: DevOpsPipeline.war
+          path: target/*.war
+      - run: docker build -t dwijesh515/mytutor .
