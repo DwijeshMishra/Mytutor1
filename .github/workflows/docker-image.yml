@@ -28,6 +28,9 @@ jobs:
     
     - run: ls 
     - run: ls target
+    
+    - name: Build and push
+      run: docker build -t dwijesh515/mytutor .
 
 
   Publish:
@@ -56,5 +59,3 @@ jobs:
 
     - run: ls
 
-    - name: Build and push
-      run: docker build -t dwijesh515/mytutor .
