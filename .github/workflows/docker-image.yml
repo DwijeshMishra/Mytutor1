@@ -27,8 +27,8 @@ jobs:
     - name: Temporarily save jar artifact
       uses: actions/upload-artifact@v2
       with:
-        name: jar-artifact
-        path: ${{ github.workspace }}target/*.jar
+        name: war-artifact
+        path: ${{ github.workspace }}/target/*.war
         retention-days: 1
 
   deploy:
@@ -39,10 +39,9 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/download-artifact@v1
       with:
-          name: jar-artifact
+          name: war-artifact
           path: target/
     - name: Docker build
       run: |
         docker build . -t dwijesh515/tutor:latest
 
- 
