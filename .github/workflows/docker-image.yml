@@ -25,4 +25,8 @@ jobs:
         with:
           name: DevOpsPipeline.war
           path: target/*.war
+      - run: ls -l
+      - run: ls target
+      - run: cd target | ls 
+      - run: cd ..
       - run: docker build -t dwijesh515/mytutor .
