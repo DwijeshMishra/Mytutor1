@@ -21,7 +21,7 @@ jobs:
     - name: Create artifacts directory and copy war file
       run: mkdir artifacts && cp target/*.war artifacts
 
-      uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v2
       with:
         name: final.war
         path: target/final.war
